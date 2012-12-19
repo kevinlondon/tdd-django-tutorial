@@ -1,0 +1,38 @@
+[
+  {
+    "pk": 1,
+    "model": "auth.user",
+    "fields": {
+      "username": "kaedon",
+      "first_name": "",
+      "last_name": "",
+      "is_active": true,
+      "is_superuser": true,
+      "is_staff": true,
+      "last_login": "2012-12-19T06:43:55.626Z",
+      "groups": [],
+      "user_permissions": [],
+      "password": "pbkdf2_sha256$10000$WyLUGHOygZx5$c4Re49Ndw83UefKEmlYdjv81+0b2seVXDKk33+VYWLU=",
+      "email": "kevinlondon@gmail.com",
+      "date_joined": "2012-12-19T06:43:41.611Z"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "auth.user",
+    "fields": {
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "is_active": true,
+      "is_superuser": true,
+      "is_staff": true,
+      "last_login": "2012-12-19T06:52:32Z",
+      "groups": [],
+      "user_permissions": [],
+      "password": "pbkdf2_sha256$10000$sk7gDBzSHK6N$1t8MGwxcouM8hnhkO9H2aLlJ9BJVoBFULh1EZ694Ba8=",
+      "email": "",
+      "date_joined": "2012-12-19T06:52:32Z"
+    }
+  }
+]

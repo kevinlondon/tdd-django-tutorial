@@ -1,7 +1,9 @@
 from django.test import LiveServerTestCase
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 
 class PollsTest(LiveServerTestCase):
+    fixtures = ['admin_user.json']
 
     def setUp(self):
         self.browser = webdriver.Firefox()
