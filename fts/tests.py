@@ -19,7 +19,7 @@ class PollsTest(LiveServerTestCase):
         # See familiar 'Django Administration' heading
         body = self.browser.find_element_by_tag_name('body')
         self.assertIn('Django administration', body.text)
-        
+
         # Type in username and passwords and hit return
         username_field = self.browser.find_element_by_name('username')
         username_field.send_keys('admin')
@@ -52,7 +52,7 @@ class PollsTest(LiveServerTestCase):
         body = self.browser.find_element_by_tag_name('body')
         self.assertIn('Question:', body.text)
         self.assertIn('Date published:', body.text)
-        
+
         # Add a question for the poll
         question_field = self.browser.find_element_by_name('question')
         question_field.send_keys('How awesome is Test-Driven Development?')

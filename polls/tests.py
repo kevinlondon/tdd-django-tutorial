@@ -5,7 +5,7 @@ from polls.models import Poll, Choice
 class PollModelTest(TestCase):
     def test_creating_a_new_poll_and_saving_it_to_the_database(self):
         # Create a new poll object wiht its question set
-        
+
         poll = Poll()
         poll.question = "What's up?"
         poll.pub_date = timezone.now()
