@@ -76,6 +76,14 @@ class HomePageViewTest(TestCase):
 
         response = self.client.get('/')
 
+        # Check that we've used the right template
+        self.assertTemplateUsed(response, 'home.html')
+
+        # Check that we've passed polls to the template
+        polls_in_context = response.context['polls']
+        self.assertEquals(list(polls_in_context), [poll1, poll2])
+
+        # Check the poll names appear on the page
         self.assertIn(poll1.question, response.content)
         self.assertIn(poll2.question, response.content)
 
