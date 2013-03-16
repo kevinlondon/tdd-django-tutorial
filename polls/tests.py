@@ -1,5 +1,7 @@
 from django.test import TestCase
 from django.utils import timezone
+from django.core.urlresolvers import reverse
+
 from polls.models import Poll, Choice
 
 class PollModelTest(TestCase):
@@ -67,7 +69,7 @@ class ChoiceModelTest(TestCase):
 
 class HomePageViewTest(TestCase):
 
-    def test_root_url_shows_all_polls(self):
+    def test_root_url_shows_links_to_all_polls(self):
         # Set up some polls
         poll1 = Poll(question='6 times 7', pub_date=timezone.now())
         poll1.save()
@@ -87,3 +89,8 @@ class HomePageViewTest(TestCase):
         self.assertIn(poll1.question, response.content)
         self.assertIn(poll2.question, response.content)
 
+        # Check that the page also contains the urls to individual polls
+        poll1_url = reverse('polls.views.poll', args=[poll1.id,])
+        self.assertIn(poll1_url, response.content)
+        poll2_url = reverse('polls.views.poll', args=[poll2.id,])
+        self.assertIn(poll2_url, response.content)
