@@ -32,7 +32,7 @@ class PollsTest(LiveServerTestCase):
     def tearDown(self):
         self.browser.quit()
 
-    def DONTtest_can_create_new_poll_via_admin_site(self):
+    def test_can_create_new_poll_via_admin_site(self):
         # Opens web browser, goes to the admin page
         self.browser.get(self.live_server_url + '/admin/')
 
