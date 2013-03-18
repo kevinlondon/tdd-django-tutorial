@@ -4,6 +4,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', 'polls.views.home'),
+    url(r'^poll/(\d+)/$', 'polls.views.poll'),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )
