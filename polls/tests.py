@@ -150,7 +150,7 @@ class PollsVoteFormTest(TestCase):
         ])
 
         # Check that it uses radio inputs to render
-        self.assertIn('input type="radio"', form.as_p())
+        self.assertIn('type="radio"', form.as_p())
 
     def test_page_shows_choices_using_form(self):
         # Set up a poll with choices
